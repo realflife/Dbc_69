@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กิจกรรมรับน้องคอมธุรกิจดิจิทัล 2569</title>
+    <!-- Use Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-shape shape-1"></div>
+    <div class="background-shape shape-2"></div>
+    <div class="background-shape shape-3"></div>
+
+    <header>
+        <div class="header-content">
+            <h1>กิจกรรมรับน้อง <span class="highlight">คอมธุรกิจดิจิทัล 2569</span></h1>
+            <p>ทำความรู้จักกับน้องๆ ปี 1 ได้ที่นี่</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="ค้นหาชื่อ, ชื่อเล่น, หรือคำใบ้...">
+        </div>
+    </header>
+
+    <main>
+        <div class="stats-container">
+            <p>จำนวนน้องทั้งหมด: <span id="totalCount">0</span> คน</p>
+        </div>
+        <div class="cards-grid" id="cardsGrid">
+            <!-- Cards will be generated via JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Created for Digital Business Computer Seniors</p>
+    </footer>
+
+    <!-- Load data first, then logic -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
