@@ -95,7 +95,7 @@ const students = [
     "fullName": "นายสรกฤช แก้วแสง",
     "nickname": "ตาต้า",
     "hint": "ปอดโยก",
-    "image": "images/14.jpg"
+    "image": "images/tata.jpg"
   },
   {
     "timestamp": "7/8/2026 12:52:10",
