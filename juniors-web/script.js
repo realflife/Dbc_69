@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardsGrid = document.getElementById('cardsGrid');
     const searchInput = document.getElementById('searchInput');
     const totalCount = document.getElementById('totalCount');
+    
+    // Modal elements
+    const modal = document.getElementById('studentModal');
+    const closeModal = document.querySelector('.close-modal');
+    const modalImage = document.getElementById('modalImage');
+    const modalFullName = document.getElementById('modalFullName');
+    const modalNickname = document.getElementById('modalNickname');
+    const modalHint = document.getElementById('modalHint');
 
     // Helper function to extract Drive ID and create a direct image link
     function getDirectImageUrl(driveUrl) {
@@ -49,9 +57,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             
+            // Add click event to open modal
+            card.addEventListener('click', () => {
+                openModal(student, imgUrl);
+            });
+            
             cardsGrid.appendChild(card);
         });
     }
+
+    // Modal Logic
+    function openModal(student, imgUrl) {
+        modalImage.src = imgUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(student.nickname || student.fullName)}&background=random&color=fff&size=800`;
+        modalImage.onerror = function() {
+            this.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.nickname || student.fullName)}&background=random&color=fff&size=800`;
+        };
+        
+        modalFullName.textContent = student.fullName;
+        modalNickname.textContent = student.nickname || '-';
+        modalHint.textContent = `"${student.hint || '-'}"`;
+        
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling in background
+    }
+
+    function closeStudentModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+        // Wait for animation to finish before clearing image to prevent flash
+        setTimeout(() => {
+            if (!modal.classList.contains('show')) {
+                modalImage.src = '';
+            }
+        }, 300);
+    }
+
+    closeModal.addEventListener('click', closeStudentModal);
+
+    // Close modal when clicking outside of it
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeStudentModal();
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeStudentModal();
+        }
+    });
 
     // Initial render
     renderCards(students);
