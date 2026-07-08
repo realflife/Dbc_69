@@ -194,5 +194,12 @@ const students = [
     "nickname": "มีย",
     "hint": "3287",
     "image": "images/28.jpg"
+  },
+  {
+    "timestamp": "7/8/2026 20:43:53",
+    "fullName": "นาย ณัฐิวุฒิ นาคปานเอี่ยม",
+    "nickname": "โซน",
+    "hint": "ยิ้มง่ายแต่คุยไม่เก่ง",
+    "image": "images/29.jpg"
   }
 ];
