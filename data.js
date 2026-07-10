@@ -201,5 +201,26 @@ const students = [
     "nickname": "โซน",
     "hint": "ยิ้มง่ายแต่คุยไม่เก่ง",
     "image": "images/29.jpg"
+  },
+  {
+    "timestamp": "7/9/2026 16:38:01",
+    "fullName": "กฤตวยา หอมภู่",
+    "nickname": "กฤต",
+    "hint": "ปอดโยก",
+    "image": "images/30.jpg"
+  },
+  {
+    "timestamp": "7/9/2026 18:41:47",
+    "fullName": "คฑา รอดศรี",
+    "nickname": "ไอซ์",
+    "hint": "ยังไม่รุ้",
+    "image": "images/31.jpg"
+  },
+  {
+    "timestamp": "7/9/2026 22:09:18",
+    "fullName": "ณัฐวัฒน์ ดารา",
+    "nickname": "เจ",
+    "hint": "คับแข็ง",
+    "image": "images/32.jpg"
   }
 ];
